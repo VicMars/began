@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
+  get '/about', to: 'pages#about', as: :about
   get '/landingpage', to: 'pages#landingpage', as: :landingpage
   get '/homepage', to: 'pages#home', as: :homepage
 

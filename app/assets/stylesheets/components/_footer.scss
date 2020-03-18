@@ -75,6 +75,7 @@
 }
 
 
+
 .footer-nav-item i {
   font-style: normal;
   font-weight: 900;
@@ -97,4 +98,13 @@
 
 .nav-element {
   text-align: center;
+}
+
+
+/* Responsive */
+
+@media (min-width: 1200px) {
+  #footer {
+    display: none;
+  }
 }

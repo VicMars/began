@@ -92,25 +92,10 @@
     background-color: white;
 }
 
-  .wday-0 {}
-  .wday-1 {}
-  .wday-2 {}
-  .wday-3 {}
-  .wday-4 {}
-  .wday-5 {}
-  .wday-6 {}
+@media (min-width: 1200px) {
+.simple-calendar {
+  width:60%;
+  margin: 30px auto 0 auto;
+}
 
-  .today {}
-  .past {}
-  .future {}
-
-  .start-date {}
-
-  .prev-month {
-    opacity: 0.3;
-  }
-  .next-month { }
-  .current-month {}
-
-  .has-events {}
-
+}

@@ -1,0 +1,72 @@
+.logo-navbar {
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  margin: 0 auto;
+}
+
+
+.icon-navbar {
+    height: auto;
+    width: 100px;
+    position: fixed;
+    z-index: 1;
+    top: 25%;
+    left: -10px;
+    overflow-x: hidden;
+    padding: 25px 0;
+    border: 1px solid $yellow;
+    border-radius: 25px;
+
+      ul {
+        list-style:none;
+      }
+
+    i {
+  color: $yellow;
+  font-size: 20px;
+  padding: 20px 0;
+    }
+
+    .active i{
+  color: $yellow;
+}
+}
+
+.nav-logo {
+  width: 22px;
+  height: auto;
+}
+
+.navbar-nav li {
+  padding: 12px 0;
+  text-transform: uppercase;
+  font-weight: thin;
+  font-size: 15px;
+  i {
+    font-size: 15px;
+    color:$yellow;
+    padding-right: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  html.landing-page, html.new-page {
+    .icon-navbar {
+      display:none;
+    }
+  }
+}
+
+
+
+@media (max-width: 1200px) {
+  .logo-navbar, .icon-navbar {
+    display: none;
+  }
+}
+
+
+
+

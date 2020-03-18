@@ -28,6 +28,10 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
+    <div class="navbar">
+      <%=  render 'shared/navbar' %>
+    </div>
+
     <%= yield %>
 
     <% unless current_user.nil? || request.env['PATH_INFO'] == root_path %>

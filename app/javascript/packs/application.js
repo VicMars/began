@@ -7,11 +7,13 @@ import { post_form_toggle } from "../plugins/add-post"
 import { dragg } from "../plugins/draggable-item"
 import { striking } from "../plugins/striking"
 
+
 showExplanation();
 striking();
 iconToggle();
 form_toggle();
 cookbook_card_toggle();
+
 
 if(window.location.pathname === '/posts'){
   post_form_toggle();

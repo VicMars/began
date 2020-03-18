@@ -1,10 +1,9 @@
+<html class="home-page">
 <div class="topbar">
   <%= image_tag("began-logo.png", alt: "Began logo", class: "logo") %>
 </div>
 
 <div class="container" id="container-dashboard" style="background-image: url(<%= image_url("began-homepage.jpg") %>)" >
-  <!-- <span class="background-image"></span> -->
-  <!-- style="background-image: url(<%#= image_url("began-homepage.jpeg") %>)" -->
 
   <div class="welcome">
     <h4 class="xl-large">Hi,</h4>
@@ -12,22 +11,28 @@
   </div>
 
   <div class="progress-card">
+
     <div class="percent">
-      <svg id="ring">
+      <div class="percent-ring">
+        <svg id="ring">
         <circle cx="70" cy="70" r="60"></circle>
         <circle style="
           stroke-dasharray: calc(440 * <%= @percentage %>) calc(440 * <%= 1 - @percentage %>);
           stroke-dashoffset: 153;"
           cx="70" cy="70" r="60"></circle>
       </svg>
-      <span class="leaf-icon-dashboard"><i class="fas fa-seedling"></i></span>
+    </div>
+      <div class="leaf-icon-dashboard"><i class="fas fa-seedling"></i></div>
     </div>
 
     <div class="progress-text">
       <p class="number-days"><%= pluralize(@days_without_meat_month, "DAY").upcase %> <br>
       <span class="without-meat">without meat</span></p>
     </div>
+
   </div>
+
+
 
 
   <div class="cards-button">
@@ -63,3 +68,5 @@
 
   </div>
 </div>
+
+</html>

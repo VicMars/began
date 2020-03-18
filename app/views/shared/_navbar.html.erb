@@ -1,35 +1,57 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to homepage_path, class: "navbar-brand" do %>
-    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+
+  <div class="logo-navbar">
+    <%= link_to homepage_path do %>
+      <%= image_tag("began-logo.png", alt: "Began logo", class: "logo") %>
     <% end %>
+  </div>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  <div class="icon-navbar">
+    <ul>
+      <li class="nav-item active">
+        <% if current_user.category.nil? %>
+              <%= link_to choose_category_path do %>
+                <i class="fas fa-play"></i>
+              <% end %>
+            <% else %>
+              <% if current_user.challenges.empty? %>
+                <%= link_to category_path(current_user.category) do %>
+                  <i class="fas fa-play"></i>
+                <% end %>
+              <% else %>
+                <%= link_to category_path(current_user.category, anchor: current_user.challenges.last.position) do %>
+                  <i class="fas fa-play"></i>
+                <% end %>
+              <% end %>
+        <% end %>
+      </li>
 
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <% if user_signed_in? %>
-        <li class="nav-item active">
-          <%= link_to "Recipes", all_recipes_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item active">
-          <%= link_to "My cookbook", cookbook_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item dropdown">
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Action", "#", class: "dropdown-item" %>
-            <%= link_to "Another action", "#", class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
-        </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
-      <% end %>
+      <li class="nav-item">
+        <%= link_to meat_counter_path  do %>
+          <i class="fas fa-calendar"></i>
+        <% end %>
+      </li>
+      <li class="nav-item">
+        <%= link_to cookbook_path do %>
+        <i class="fas fa-utensil-spoon"></i>
+        <% end %>
+      </li>
+      <li class="nav-item">
+        <%= link_to all_recipes_path do %>
+        <i class="fas fa-utensils"></i>
+        <% end %>
+      </li>
+      <li class="nav-item">
+        <%= link_to choose_category_path  do %>
+          <i class="fas fa-cog"></i>
+        <% end %>
+      </li>
+      <li class="nav-item">
+        <%= link_to about_path  do %>
+          <%= image_tag("began_logo_small.png", alt: "Began logo", class: "nav-logo") %>
+        <% end %>
+      </li>
     </ul>
   </div>
-</div>
+
+
+

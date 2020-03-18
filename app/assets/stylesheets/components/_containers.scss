@@ -11,3 +11,30 @@
   margin: 30px auto 120px auto;
   padding: 0 25px;
 }
+
+
+#container-dashboard {
+  background-position: 60% -30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 0;
+  padding-top: 30px;
+}
+
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 70%;
+  }
+
+  #container-dashboard {
+  margin-top: -70px;
+  }
+
+}
+
+html.new-page {
+  .container {
+    max-width: 500px;
+  }
+}

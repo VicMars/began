@@ -44,11 +44,13 @@ img {
 }
 
 .search-form {
+  display: flex;
+  justify-content: center;
   margin: 0 auto;
   padding-bottom: 25px;
 
   .form-control {
-    width:80%;
+    width: auto;
     margin-right: 15px;
     border-radius: 15px;
   }
@@ -61,6 +63,17 @@ img {
     padding: 4px 12px;
     font-size: 20px;
   }
+}
+
+@media (min-width: 576px) {
+.search-form .form-inline .form-control {
+    width: 300px;
+  }
+}
+
+
+.form-control {
+  border-radius: 10px;
 }
 
 .recipe-column {
@@ -101,3 +114,9 @@ mark {
 .fas.fa-square {
   color: $yellow;
 }
+
+.about-text {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
