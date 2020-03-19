@@ -58,6 +58,11 @@
 
 
 @media (min-width: 1200px) {
+
+  .topbar {
+    border-bottom: 0;
+    background-color: transparent;
+  }
   .topbar .chevron, .topbar .b-small-logo {
     display: none;
   }
