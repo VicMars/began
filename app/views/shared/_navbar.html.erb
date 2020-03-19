@@ -1,7 +1,7 @@
 
   <div class="logo-navbar">
     <%= link_to homepage_path do %>
-      <%= image_tag("began-logo.png", alt: "Began logo", class: "logo") %>
+      <%= image_tag("began-logo.png", alt: "Began logo", class: "desktop-logo") %>
     <% end %>
   </div>
 
@@ -40,6 +40,11 @@
         <i class="fas fa-utensils"></i>
         <% end %>
       </li>
+       <li class="footer-nav-item <%= @forum ? 'active' : '' %> ">
+          <%= link_to posts_path do %>
+            <i class="fas fa-users"></i>
+          <% end %>
+        </li>
       <li class="nav-item">
         <%= link_to choose_category_path  do %>
           <i class="fas fa-cog"></i>
@@ -47,7 +52,9 @@
       </li>
       <li class="nav-item">
         <%= link_to about_path  do %>
-          <%= image_tag("began_logo_small.png", alt: "Began logo", class: "nav-logo") %>
+          <div class="b-small-logo">
+            <i id="small-icon" class="fas fa-circle"></i><span class="letter-logo">b</span>
+          </div>
         <% end %>
       </li>
     </ul>

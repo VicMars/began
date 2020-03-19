@@ -1,8 +1,15 @@
+.navbar {
+  z-index: 1000000;
+}
+
 .logo-navbar {
   width: 100%;
   text-align: center;
   z-index: 2;
   margin: 0 auto;
+   .desktop-logo{
+    width: 130px;
+   }
 }
 
 
@@ -33,11 +40,6 @@
 }
 }
 
-.nav-logo {
-  width: 22px;
-  height: auto;
-}
-
 .navbar-nav li {
   padding: 12px 0;
   text-transform: uppercase;
@@ -62,7 +64,7 @@
 
 
 @media (max-width: 1200px) {
-  .logo-navbar, .icon-navbar {
+  .navbar, .logo-navbar, .icon-navbar {
     display: none;
   }
 }

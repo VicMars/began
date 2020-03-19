@@ -3,34 +3,7 @@
   width:100%;
   bottom:0;
   z-index: 1000000;
-}
-
-.small-logo {
-  position: absolute;
-  right: calc(50% - 30px);
-  bottom: 45px;
-  text-align: center;
-  width: 60px;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.purple-circle {
-  background-color: #5626C4;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-}
-
-.go {
-  font-size: 30px;
-  position: absolute;
-  z-index: 15;
-  padding-bottom: 6px;
-  color: white;
-  font-family: $logo-font;
+  border: 1px solid $yellow;
 }
 
 .change-game-icon {
@@ -44,29 +17,27 @@
 .footer-nav {
   position: absolute;
   width:100%;
-  height: 75px;
+  height: 80px;
   background-color: white;
-  bottom: 0;
-  box-shadow: 0px 4px 40px rgba(204, 204, 204, 0.9);
+  bottom: -4px;
+  border: 1px solid $yellow;
   border-radius: 50px 50px 0px 0px;
   z-index: 1;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin: 0;
   padding:0;
+
+    li {
+      padding: 0 4%;
+    }
 }
 
 .footer-nav-item {
   display: inline;
-  width: 60px;
 }
 
-.footer-nav-item a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 .footer-icon-section {
   display: flex;
@@ -74,21 +45,19 @@
   justify-content: space-around;
 }
 
-
-
 .footer-nav-item i {
   font-style: normal;
   font-weight: 900;
-  font-size: 30px;
-  line-height: 34px;
-  color: transparent;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
+  font-size: 24px;
+  line-height: 42px;
+  color: $yellow;
+  -webkit-text-stroke-width: 0px;
+  -webkit-text-stroke-color: $yellow;
 }
 
 .active i {
-  -webkit-text-stroke-width: 0;
-  color: black;
+  -webkit-text-stroke-width: 1px;
+  color: transparent;
 }
 
 .footer-nav-text {
@@ -100,6 +69,29 @@
   text-align: center;
 }
 
+.b-small-logo {
+  display: flex;
+  align-items: center;
+}
+
+
+#small-icon.fa-circle {
+  font-size: 8px;
+  line-height: 2;
+  padding-right: 6px;
+}
+
+#small-icon.fa-circle:before{
+  -webkit-text-stroke-width: 0;
+  -webkit-text-stroke-color: $yellow;
+  color: $yellow  !important;
+}
+
+
+.letter-logo {
+  font-family: $logo-font;
+  font-size: 30px;
+}
 
 /* Responsive */
 

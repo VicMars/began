@@ -10,9 +10,14 @@
   font-weight: bold;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   z-index: 1000000;
+
+  .logo {
+    width: 140px;
+  }
 }
+
 
 .topbar-desktop {
   text-align:center;
@@ -25,12 +30,13 @@
 }
 
 .topbar-title {
+  width: 75%;
   margin-bottom: 0;
 }
 
 .chevron {
-  // flex-grow:1;
-  padding-left: 25px;
+  width: 25%;
+  padding: 0 25px;
 }
 
 .chevron i {
@@ -49,28 +55,7 @@
   // position: fixed;
 }
 
-.b-small-logo {
-  display: flex;
-  align-items: center;
-  padding-right: 25px;
-}
 
-.logo-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #FACD3D;
-  margin-right: 3px;
-}
-
-.logo-b {
-  font-family: $logo-font;
-}
-
-.logo {
-  height: 40px;
-  margin: 0 auto;
-}
 
 @media (min-width: 1200px) {
   .topbar .chevron, .topbar .b-small-logo {
@@ -79,6 +64,7 @@
 
   .topbar-title {
     margin: 0 auto;
+    text-align:center
   }
 
   html.home-page, html.landing-page, html.new-page {
