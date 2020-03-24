@@ -14,7 +14,7 @@
             <i class="fas fa-play"></i>
           <% end %>
 
-        <% else %>
+        <% elsif %>
         <% if current_user.challenges.empty? %>
           <%= link_to category_path(current_user.category) do %>
             <i class="fas fa-play"></i>
