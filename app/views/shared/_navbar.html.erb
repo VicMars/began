@@ -9,12 +9,12 @@
 
     <ul>
       <li class="nav-item">
-        <% if current_user.category.nil? %>
-          <%= link_to choose_category_path do %>
+        <%= link_to choose_category_path do %>
+           <% if current_user.category.nil? %>
             <i class="fas fa-play"></i>
           <% end %>
 
-        <% elsif %>
+        <% else %>
         <% if current_user.challenges.empty? %>
           <%= link_to category_path(current_user.category) do %>
             <i class="fas fa-play"></i>
