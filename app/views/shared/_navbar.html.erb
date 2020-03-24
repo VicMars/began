@@ -7,8 +7,6 @@
 
   <div class="icon-navbar">
 
-      <li class="nav-item-play">
-
         <% if current_user.category.nil? %>
           <%= link_to choose_category_path do %>
             <i class="fas fa-play"></i>
@@ -25,8 +23,6 @@
           <% end %>
         <% end %>
         <% end %>
-
-      </li>
 
     <ul>
 
