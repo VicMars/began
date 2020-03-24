@@ -29,15 +29,21 @@
         list-style:none;
       }
 
-    i {
-  color: $yellow;
-  font-size: 20px;
-  padding: 20px 0;
-    }
+      i {
+        color: $yellow;
+        font-size: 20px;
+        padding: 20px 0;
+      }
 
     .active i{
-  color: $yellow;
-}
+      color: transparent;
+      border: 1px solid $yellow;
+    }
+
+   .nav-item-play {
+      margin-left: 40px;
+      list-style: none;
+   }
 }
 
 .navbar-nav li {
