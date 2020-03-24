@@ -8,24 +8,7 @@
   <div class="icon-navbar">
 
     <ul>
-      <li class="nav-item <%= params[:action] == 'challenge' ? 'active' : '' %>">
-        <% if current_user.category.nil? %>
-          <%= link_to choose_category_path do %>
-            <i class="fas fa-play"></i>
-          <% end %>
 
-        <% else %>
-        <% if current_user.challenges.empty? %>
-          <%= link_to category_path(current_user.category) do %>
-            <i class="fas fa-play"></i>
-          <% end %>
-        <% else %>
-          <%= link_to category_path(current_user.category, anchor: current_user.challenges.last.position) do %>
-            <i class="fas fa-play"></i>
-          <% end %>
-        <% end %>
-        <% end %>
-      </li>
 
       <li class="nav-item <%= params[:action] == 'meat_counter' ? 'active' : '' %>">
         <%= link_to meat_counter_path  do %>
