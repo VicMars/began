@@ -9,19 +9,18 @@
     <ul>
       <li class="nav-item active">
         <% if current_user.category.nil? %>
-              <%= link_to choose_category_path do %>
-                <i class="fas fa-play"></i>
-              <% end %>
-            <% else %>
-              <% if current_user.challenges.empty? %>
-                <%= link_to category_path(current_user.category) do %>
-                  <i class="fas fa-play"></i>
-                <% end %>
-              <% else %>
-                <%= link_to category_path(current_user.category, anchor: current_user.challenges.last.position) do %>
-                  <i class="fas fa-play"></i>
-                <% end %>
-              <% end %>
+          <%= link_to choose_category_path do %>
+            <i class="fas fa-play"></i>
+          <% end %>
+        <% else %>
+        <% if current_user.challenges.empty? %>
+          <%= link_to category_path(current_user.category) do %>
+            <i class="fas fa-play"></i>
+          <% end %>
+        <% else %>
+          <%= link_to category_path(current_user.category, anchor: current_user.challenges.last.position) do %>
+            <i class="fas fa-play"></i>
+          <% end %>
         <% end %>
       </li>
 
