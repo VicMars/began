@@ -8,7 +8,7 @@
   <div class="icon-navbar">
 
     <ul>
-      <li class="nav-item active">
+      <li class="nav-item <%= params[:action] == 'challenge' ? 'active' : '' %>">
         <% if current_user.category.nil? %>
           <%= link_to choose_category_path do %>
             <i class="fas fa-play"></i>
