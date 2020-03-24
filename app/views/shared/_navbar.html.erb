@@ -8,33 +8,55 @@
   <div class="icon-navbar">
 
     <ul>
+      <li class="nav-item">
+        <% if current_user.category.nil? %>
+          <%= link_to choose_category_path do %>
+            <i class="fas fa-play"></i>
+          <% end %>
 
+        <% else %>
+        <% if current_user.challenges.empty? %>
+          <%= link_to category_path(current_user.category) do %>
+            <i class="fas fa-play"></i>
+          <% end %>
+        <% else %>
+          <%= link_to category_path(current_user.category, anchor: current_user.challenges.last.position) do %>
+            <i class="fas fa-play"></i>
+          <% end %>
+        <% end %>
+        <% end %>
+      </li>
 
       <li class="nav-item <%= params[:action] == 'meat_counter' ? 'active' : '' %>">
         <%= link_to meat_counter_path  do %>
           <i class="fas fa-calendar"></i>
         <% end %>
       </li>
+
       <li class="nav-item <%= params[:action] == 'cookbook' ? 'active' : '' %>">
         <%= link_to cookbook_path do %>
         <i class="fas fa-utensil-spoon"></i>
         <% end %>
       </li>
+
       <li class="nav-item <%= params[:action] == 'all_recipes' ? 'active' : '' %>">
         <%= link_to all_recipes_path do %>
         <i class="fas fa-utensils"></i>
         <% end %>
       </li>
-       <li class="nav-item <%= @forum ? 'active' : '' %> ">
+
+      <li class="nav-item <%= @forum ? 'active' : '' %> ">
           <%= link_to posts_path do %>
             <i class="fas fa-users"></i>
           <% end %>
-        </li>
+      </li>
+
       <li class="nav-item <%= params[:action] == 'category' ? 'active' : '' %>">
         <%= link_to choose_category_path  do %>
           <i class="fas fa-cog"></i>
         <% end %>
       </li>
+
       <li class="nav-item">
         <%= link_to about_path  do %>
           <div class="b-small-logo">
@@ -42,6 +64,7 @@
           </div>
         <% end %>
       </li>
+
     </ul>
   </div>
 
