@@ -9,7 +9,8 @@
 
     <ul class="icon-nav">
       <% if user_signed_in? %>
-        <%= link_to homepage_path %>
+        <%= link_to homepage_path do %>
+        <% end %>
 
         <li class="footer-nav-item <%= params[:action] == 'challenge' ? 'active' : '' %> ">
           <% if current_user.category.nil? %>
