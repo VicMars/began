@@ -8,6 +8,13 @@
   <div class="icon-navbar">
 
     <ul>
+    <% if user_signed_in? %>
+
+        <li class="nav-item <%= params[:action] == 'home' ? 'active' : '' %> ">
+          <%= link_to homepage_path  do %>
+            <i class="fas fa-play"></i>
+          <% end %>
+        </li>
 
         <li class="footer-nav-item <%= params[:action] == 'challenge' ? 'active' : '' %> ">
           <% if current_user.category.nil? %>
@@ -65,6 +72,5 @@
           </div>
         <% end %>
       </li>
-
     </ul>
   </div>
