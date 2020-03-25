@@ -4,7 +4,6 @@
     <ul class="footer-nav">
       <% if user_signed_in? %>
 
-
         <li class="footer-nav-item <%= params[:action] == 'home' ? 'active' : '' %> ">
           <%= link_to homepage_path  do %>
           <div class="b-small-logo">
