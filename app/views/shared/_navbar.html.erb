@@ -7,7 +7,16 @@
 
   <div class="icon-navbar">
 
-    <ul>
+    <ul class="icon-nav">
+      <% if user_signed_in? %>
+
+        <li class="footer-nav-item <%= params[:action] == 'home' ? 'active' : '' %> ">
+          <%= link_to homepage_path  do %>
+          <div class="b-small-logo">
+            <i id="small-icon" class="fas fa-circle"></i><span class="letter-logo">b</span>
+          </div>
+          <% end %>
+        </li>
 
         <li class="footer-nav-item <%= params[:action] == 'challenge' ? 'active' : '' %> ">
           <% if current_user.category.nil? %>
@@ -26,7 +35,6 @@
             <% end %>
           <% end %>
         </li>
-
 
       <li class="nav-item <%= params[:action] == 'meat_counter' ? 'active' : '' %>">
         <%= link_to meat_counter_path  do %>
@@ -65,5 +73,6 @@
           </div>
         <% end %>
       </li>
+
     </ul>
   </div>
